@@ -1,4 +1,12 @@
 variable "postfix" {
-  type = string
+  type    = string
   default = "mkaey"
+}
+
+variable "apiServerAuthorizedIpRanges" {
+  type = list(string)
+}
+
+variable "logAnalyticsWorkspaceId" {
+  type = string
 }
