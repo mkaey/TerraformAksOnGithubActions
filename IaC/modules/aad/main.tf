@@ -3,14 +3,12 @@ data "azurerm_subscription" "current" {}
 
 resource "azuread_group" "aadGroup" {
   display_name     = "aksAdmins"
-  owners           = [data.azuread_client_config.current.object_id]
   security_enabled = true
 }
 
 resource "azuread_application" "githubApp" {
   display_name     = "gitHubActions"
   identifier_uris  = ["api://githubactions"]
-  owners           = [data.azuread_client_config.current.object_id]
   sign_in_audience = "AzureADMyOrg"
 
   required_resource_access {
