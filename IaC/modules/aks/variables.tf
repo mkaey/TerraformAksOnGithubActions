@@ -2,8 +2,8 @@ variable "postfix" {
   type = string
 }
 
-variable "aksAdminGroupObjectIds" {
-  type = list(string)
+variable "aksAdminGroupObjectId" {
+  type = string
 }
 
 variable "apiServerAuthorizedIpRanges" {

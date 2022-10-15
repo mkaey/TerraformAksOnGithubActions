@@ -7,5 +7,5 @@ terraform {
 }
 
 provider "azuread" {
-  tenant_id = "2f4a9838-26b7-47ee-be60-ccc1fdec5953"
+  tenant_id = "619ecf84-fc66-443a-9e28-b1f131a14244"
 }

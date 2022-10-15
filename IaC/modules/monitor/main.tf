@@ -8,7 +8,8 @@ resource "azurerm_resource_group" "monitorRg" {
 }
 
 resource "azurerm_log_analytics_workspace" "logAnalytics" {
-  name     = var.logAnalyticsName
-  location = azurerm_resource_group.monitorRg.location
-  sku      = "PerGB2018"
+  name                = local.logAnalyticsName
+  resource_group_name = azurerm_resource_group.monitorRg.name
+  location            = azurerm_resource_group.monitorRg.location
+  sku                 = "PerGB2018"
 }

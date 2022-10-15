@@ -6,7 +6,3 @@ variable "postfix" {
 variable "apiServerAuthorizedIpRanges" {
   type = list(string)
 }
-
-variable "logAnalyticsWorkspaceId" {
-  type = string
-}
