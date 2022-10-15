@@ -56,7 +56,6 @@ jobs:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'plan'
         tf_actions_working_dir: "./IaC"
-        args: '-var-file="terraform.tfvars"'
  
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
@@ -65,4 +64,3 @@ jobs:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'apply'
         tf_actions_working_dir: "./IaC"
-        args: '-var-file="terraform.tfvars"'
