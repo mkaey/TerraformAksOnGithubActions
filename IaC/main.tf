@@ -2,6 +2,11 @@ module "adminGroup" {
   source = "./modules/aad"
 }
 
+module "statestore" {
+  source  = "./modules/statestore"
+  postfix = var.postfix
+}
+
 module "monitor" {
   source  = "./modules/monitor"
   postfix = var.postfix

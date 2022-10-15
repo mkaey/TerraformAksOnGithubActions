@@ -9,10 +9,11 @@ resource "azurerm_resource_group" "storageRg" {
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                = local.storageName
-  resource_group_name = azurerm_resource_group.storageRg.name
-  location            = azurerm_resource_group.storageRg.location
-
+  name                     = local.storageName
+  resource_group_name      = azurerm_resource_group.storageRg.name
+  location                 = azurerm_resource_group.storageRg.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 }
 
 resource "azurerm_storage_container" "container" {
